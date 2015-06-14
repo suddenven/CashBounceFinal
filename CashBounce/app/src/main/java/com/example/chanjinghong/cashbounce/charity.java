@@ -26,8 +26,9 @@ public class charity extends ActionBarActivity {
     }
 
     private void goHome() {
-        Intent intent = new Intent(this, Menucehck.class);
+        Intent intent = new Intent(charity.this, Menucehck.class);
         startActivity(intent);
+        finish();
     }
 
 }
