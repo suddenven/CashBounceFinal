@@ -84,7 +84,7 @@
             android:label="@string/title_activity_yesorno" >
         </activity>
         <activity android:name=".Navigation" />
-        <activity android:name=".registeration" />
+        <activity android:name=".charity"></activity>
         <activity
             android:name=".Company"
             android:label="@string/title_activity_company" >

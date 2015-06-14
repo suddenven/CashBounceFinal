@@ -41,7 +41,7 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:id="@+id/ratingBar2"
-            android:layout_above="@+id/button6"
+            android:layout_above="@+id/donateBtn"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -50,7 +50,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:text="Donate"
-        android:id="@+id/button6"
+        android:id="@+id/donateBtn"
         android:layout_alignBottom="@+id/imageView4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -60,10 +60,10 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:text="Back"
-        android:id="@+id/button7"
+        android:id="@+id/backBtnB"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button6"
-        android:layout_toStartOf="@+id/button6" />
+        android:layout_toLeftOf="@+id/donateBtn"
+        android:layout_toStartOf="@+id/donateBtn" />
 
     </LinearLayout>
 </RelativeLayout>
