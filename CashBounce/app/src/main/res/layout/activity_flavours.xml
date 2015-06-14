@@ -4,19 +4,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.chanjinghong.cashbounce.Flavours">
+    tools:context="com.example.chanjinghong.cashbounce.Flavours"
+    android:background="#ffffa6fa">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="240dp"
-        android:id="@+id/imageView"
-        android:padding="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Default"
         android:textSize="42dp"
@@ -25,46 +25,48 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
 
-    <EditText
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:id="@+id/listView4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/decriptiontext"
         android:hint="Favour description"
-        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText4"
         android:hint="Amount to deduct"
-        android:layout_below="@+id/decriptiontext"
-        android:layout_alignLeft="@+id/decriptiontext"
-        android:layout_alignStart="@+id/decriptiontext" />
+        android:layout_below="@+id/decriptiontext" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:text="Submit"
         android:id="@+id/button"
         android:onClick="sendMessage"
         android:layout_below="@+id/editText4"
         android:layout_centerHorizontal="true"
         android:background="#fffffbba"
-        android:backgroundTint="#ffd1ffad"
-        android:layout_marginTop="20dp" />
+        android:backgroundTint="#ffd1ffad" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:id="@+id/listView4"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    </LinearLayout>
 
 
 </RelativeLayout>
