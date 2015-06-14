@@ -64,6 +64,15 @@ public class Menucehck extends ActionBarActivity {
                 finish();
             }
         });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menucehck.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override

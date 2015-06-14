@@ -48,10 +48,9 @@ public class whatUowePPl extends ActionBarActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> List, ParseException e) {
                 if (e == null) {
-                    if (list.isEmpty()) {
-                        for (int i = 0; i < List.size(); i++) {
-                            list.add(List.get(i).getString("ower"));
-                        }
+                    list.clear();
+                    for (int i = 0; i < List.size(); i++) {
+                        list.add(List.get(i).getString("ower"));
                     }
                     Toast.makeText(whatUowePPl.this, "You Owe " + list.size() + " People", Toast.LENGTH_SHORT).show();
                 } else {

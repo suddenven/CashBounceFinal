@@ -48,11 +48,11 @@ public class Flavours extends ActionBarActivity {
         user.findInBackground(new FindCallback<ParseUser>() {
             @Override
             public void done(List<ParseUser> List2, ParseException e) {
-                if (list2.isEmpty()) {
-                    for (int i = 0; i < List2.size(); i++) {
-                        list2.add(List2.get(i).getUsername());
-                        list3.add(List2.get(i).getObjectId());
-                    }
+                list2.clear();
+                list3.clear();
+                for (int i = 0; i < List2.size(); i++) {
+                    list2.add(List2.get(i).getUsername());
+                    list3.add(List2.get(i).getObjectId());
                 }
             }
         });
@@ -64,10 +64,9 @@ public class Flavours extends ActionBarActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> List, ParseException e) {
                 if (e == null) {
-                    if (list.isEmpty()) {
-                        for (int i = 0; i < List.size(); i++) {
-                            list.add(List.get(i).getString("owe_me"));
-                        }
+                    list.clear();
+                    for (int i = 0; i < List.size(); i++) {
+                        list.add(List.get(i).getString("owe_me"));
                     }
                 } else {
                     Log.d("owe_me", "Error: " + e.getMessage());

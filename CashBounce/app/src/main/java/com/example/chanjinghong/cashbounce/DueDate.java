@@ -48,11 +48,11 @@ public class DueDate extends Activity {
         user.findInBackground(new FindCallback<ParseUser>() {
             @Override
             public void done(List<ParseUser> List2, ParseException e) {
-                if (list2.isEmpty()) {
-                    for (int i = 0; i < List2.size(); i++) {
-                        list2.add(List2.get(i).getUsername());
-                        list3.add(List2.get(i).getObjectId());
-                    }
+                list2.clear();
+                list3.clear();
+                for (int i = 0; i < List2.size(); i++) {
+                    list2.add(List2.get(i).getUsername());
+                    list3.add(List2.get(i).getObjectId());
                 }
             }
         });
@@ -64,10 +64,9 @@ public class DueDate extends Activity {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> List, ParseException e) {
                 if (e == null) {
-                    if (list.isEmpty()) {
-                        for (int i = 0; i < List.size(); i++) {
-                            list.add(List.get(i).getString("ower"));
-                        }
+                    list.clear();
+                    for (int i = 0; i < List.size(); i++) {
+                        list.add(List.get(i).getString("ower"));
                     }
                 } else {
                     Log.d("ower", "Error: " + e.getMessage());
