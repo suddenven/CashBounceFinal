@@ -35,6 +35,7 @@ public class Flavours extends ActionBarActivity {
     static List<String> list = new ArrayList<String>();
     static List<String> list2 = new ArrayList<String>();
     static List<String> list3 = new ArrayList<String>();
+    static List<String> list4 = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class Flavours extends ActionBarActivity {
         listView4 = (ListView)findViewById(R.id.listView4);
         textView3 = (TextView)findViewById(R.id.textView3);
 
+        // Objects retrieve from User class
         ParseQuery<ParseUser> user = ParseUser.getQuery();
         user.findInBackground(new FindCallback<ParseUser>() {
             @Override
@@ -65,8 +67,10 @@ public class Flavours extends ActionBarActivity {
             public void done(List<ParseObject> List, ParseException e) {
                 if (e == null) {
                     list.clear();
+                    list4.clear();
                     for (int i = 0; i < List.size(); i++) {
                         list.add(List.get(i).getString("owe_me"));
+                        list4.add(List.get(i).getObjectId());
                     }
                 } else {
                     Log.d("owe_me", "Error: " + e.getMessage());
@@ -87,6 +91,7 @@ public class Flavours extends ActionBarActivity {
                 for (int k = 0; k < list2.size(); k++) {
                     if (Objects.equals(Text, list3.get(k))) {
                         textView3.setText(list2.get(k));
+                        store = list4.get(k);
                     }
                 }
             }
@@ -97,18 +102,13 @@ public class Flavours extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                ParseUser currentUser = ParseUser.getCurrentUser();
-
                 if (store != null) {
-                    ParseObject gameScore = new ParseObject("owingsystem");
-                    gameScore.put("owe_me", currentUser.getObjectId());
-                    gameScore.put("ower", store);
-                    gameScore.saveInBackground();
-                    Intent intent = new Intent(Flavours.this, ListForPPLWhoOweYou.class);
+                    ParseObject.createWithoutData("owingsystem", store).deleteEventually();
+                    Intent intent = new Intent(Flavours.this, whatUowePPl.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    Intent intent = new Intent(Flavours.this, ListForPPLWhoOweYou.class);
+                    Intent intent = new Intent(Flavours.this, whatUowePPl.class);
                     startActivity(intent);
                     finish();
                 }
