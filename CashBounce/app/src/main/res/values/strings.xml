@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CashBounce</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_profile_page">ProfilePage</string>
+    
+    <string name="title_activity_list_for_pplwho_owe_you">ListForPPLWhoOweYou</string>
+    <string name="title_activity_what_uowe_ppl">whatUowePPl</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_view_pager">ViewPager</string>
+    <string name="title_activity_favours">Favours</string>
+    <string name="title_activity_flavours">Flavours</string>
+    <string name="title_activity_yesorno">Yesorno</string>
+    <string name="title_activity_navigation">Navigation</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_themainmenutest">Themainmenutest</string>
+</resources>

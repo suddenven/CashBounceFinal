@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#9575CD">
+    
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/personal"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Default"
+        android:id="@+id/username"
+        android:layout_gravity="center_horizontal"
+        android:textSize="48dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/asymbolic"
+                android:layout_marginLeft="18dp"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/ihouseiconic"
+                android:src="@drawable/houseiconic"
+                android:layout_marginLeft="18dp"
+                android:layout_gravity="bottom" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/phoneiconic"
+                android:layout_marginLeft="18dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+
+                android:text="default@imail.com"
+                android:textSize="26dp"
+                android:id="@+id/emailview"
+                android:layout_gravity="left|center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+
+                android:text="default address"
+                android:textSize="20dp"
+                android:id="@+id/addressview"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+
+                android:text="0123456789"
+                android:textSize="26dp"
+                android:id="@+id/phoneview"
+                android:layout_gravity="left|center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal|bottom"
+            android:rating="3"
+            android:stepSize="1"
+            android:numStars="5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPTION"
+            android:id="@+id/option" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
